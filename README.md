@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://github.com/oxbow-app/releases/releases/latest/download/Oxbow-macOS-arm64.dmg"><strong>Download for macOS</strong></a>
   ·
-  <a href="https://oxbow-hazel.vercel.app/">Website</a>
+  <a href="https://oxbowdb.app/">Website</a>
   ·
   <a href="https://github.com/oxbow-app/releases/releases">Release notes</a>
   ·
