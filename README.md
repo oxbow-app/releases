@@ -5,6 +5,8 @@
 <p align="center">
   <a href="https://github.com/oxbow-app/releases/releases/latest/download/Oxbow-macOS-arm64.dmg"><strong>Download for macOS</strong></a>
   ·
+  <a href="https://github.com/oxbow-app/releases/releases/latest/download/Oxbow-Windows-x64-setup.exe"><strong>Download for Windows</strong></a>
+  ·
   <a href="https://oxbowdb.app/">Website</a>
   ·
   <a href="https://github.com/oxbow-app/releases/releases">Release notes</a>
@@ -20,7 +22,7 @@ Oxbow is a desktop database client with a built-in MCP server. Write queries, ed
 AI agents connected over MCP get only what you share: writes run only on connections you allow, or wait for your
 review as pending edits.
 
-**PostgreSQL · MySQL · macOS** — free public beta, no account needed.
+**PostgreSQL · MySQL · macOS · Windows** — free public beta, no account needed.
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/editor-light.webp">
@@ -39,7 +41,7 @@ review as pending edits.
 - **Import and export** — Bring CSV, TSV, Excel or JSON into a table; save results as CSV, Excel, JSON, SQL, Markdown
   and more.
 - **History** — Every statement you run, with its time and rows.
-- **Connections** — TLS, SSH tunnels, and passwords kept in the macOS keychain.
+- **Connections** — TLS, SSH tunnels, and passwords kept in the macOS Keychain or the Windows Credential Manager.
 - **Light and dark** — Or follow the system.
 
 ## Built-in MCP server
@@ -62,12 +64,22 @@ Add Oxbow to them in one click from Settings; any other MCP client can be added 
 
 ## Download
 
-Oxbow is in public beta for macOS with Apple Silicon (M1 or later).
+Oxbow is in public beta for macOS with Apple Silicon (M1 or later) and for Windows 11 or later.
+
+### macOS
 
 1. Download [`Oxbow-macOS-arm64.dmg`](https://github.com/oxbow-app/releases/releases/latest/download/Oxbow-macOS-arm64.dmg).
 2. Open it and drag Oxbow into Applications.
 3. The first time you open it, macOS may say it can’t check the app. Open **System Settings › Privacy & Security**
    and choose **Open Anyway**.
+
+### Windows
+
+1. Download [`Oxbow-Windows-x64-setup.exe`](https://github.com/oxbow-app/releases/releases/latest/download/Oxbow-Windows-x64-setup.exe).
+   It also runs on Windows on Arm.
+2. Run it. It installs for your user only, so it doesn’t need administrator rights.
+3. Oxbow isn’t signed with a Microsoft certificate yet, so Windows may say it protected your PC. Choose
+   **More info** and then **Run anyway**.
 
 Oxbow updates itself from then on: when a new version is out, it asks before installing.
 
