@@ -7,6 +7,8 @@
   ·
   <a href="https://github.com/oxbow-app/releases/releases/latest/download/Oxbow-Windows-x64-setup.exe"><strong>Download for Windows</strong></a>
   ·
+  <a href="https://github.com/oxbow-app/releases/releases/latest/download/Oxbow-Linux-x86_64.AppImage"><strong>Download for Linux</strong></a>
+  ·
   <a href="https://oxbowdb.app/">Website</a>
   ·
   <a href="https://github.com/oxbow-app/releases/releases">Release notes</a>
@@ -22,7 +24,7 @@ Oxbow is a desktop database client with a built-in MCP server. Write queries, ed
 AI agents connected over MCP get only what you share: writes run only on connections you allow, or wait for your
 review as pending edits.
 
-**PostgreSQL · MySQL · macOS · Windows** — free public beta, no account needed.
+**PostgreSQL · MySQL · macOS · Windows · Linux** — free public beta, no account needed.
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/editor-light.webp">
@@ -41,7 +43,8 @@ review as pending edits.
 - **Import and export** — Bring CSV, TSV, Excel or JSON into a table; save results as CSV, Excel, JSON, SQL, Markdown
   and more.
 - **History** — Every statement you run, with its time and rows.
-- **Connections** — TLS, SSH tunnels, and passwords kept in the macOS Keychain or the Windows Credential Manager.
+- **Connections** — TLS, SSH tunnels, and passwords kept in the macOS Keychain, the Windows Credential Manager or your
+  Linux keyring (GNOME Keyring or KWallet).
 - **Light and dark** — Or follow the system.
 
 ## Built-in MCP server
@@ -64,7 +67,8 @@ Add Oxbow to them in one click from Settings; any other MCP client can be added 
 
 ## Download
 
-Oxbow is in public beta for macOS with Apple Silicon (M1 or later) and for Windows 11 or later.
+Oxbow is in public beta for macOS with Apple Silicon (M1 or later), for Windows 11 or later, and for
+Linux on x64.
 
 ### macOS
 
@@ -80,6 +84,17 @@ Oxbow is in public beta for macOS with Apple Silicon (M1 or later) and for Windo
 2. Run it. It installs for your user only, so it doesn’t need administrator rights.
 3. Oxbow isn’t signed with a Microsoft certificate yet, so Windows may say it protected your PC. Choose
    **More info** and then **Run anyway**.
+
+### Linux
+
+1. Download [`Oxbow-Linux-x86_64.AppImage`](https://github.com/oxbow-app/releases/releases/latest/download/Oxbow-Linux-x86_64.AppImage).
+2. Make it executable and open it:
+   ```sh
+   chmod +x Oxbow-Linux-x86_64.AppImage
+   ./Oxbow-Linux-x86_64.AppImage
+   ```
+3. If it asks for FUSE on Ubuntu 24.04 or later, run `sudo apt install libfuse2t64`. If your system has no keyring
+   yet, it asks you to create one the first time you save a password.
 
 Oxbow updates itself from then on: when a new version is out, it asks before installing.
 
