@@ -24,7 +24,7 @@ Oxbow is a desktop database client with a built-in MCP server. Write queries, ed
 AI agents connected over MCP get only what you share: writes run only on connections you allow, or wait for your
 review as pending edits.
 
-**PostgreSQL · MySQL · macOS · Windows · Linux** — free public beta, no account needed.
+**PostgreSQL · MySQL · SQLite · macOS · Windows · Linux** — free public beta, no account needed.
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/editor-light.webp">
@@ -43,8 +43,8 @@ review as pending edits.
 - **Import and export** — Bring CSV, TSV, Excel or JSON into a table; save results as CSV, Excel, JSON, SQL, Markdown
   and more.
 - **History** — Every statement you run, with its time and rows.
-- **Connections** — TLS, SSH tunnels, and passwords kept in the macOS Keychain, the Windows Credential Manager or your
-  Linux keyring (GNOME Keyring or KWallet).
+- **Connections** — Paste a connection URL or fill in the form. TLS, SSH tunnels, SQLite files, and passwords kept in
+  the macOS Keychain, the Windows Credential Manager or your Linux keyring (GNOME Keyring or KWallet).
 - **Light and dark** — Or follow the system.
 
 ## Built-in MCP server
