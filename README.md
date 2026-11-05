@@ -24,7 +24,7 @@ Oxbow is a desktop database client with a built-in MCP server. Write queries, ed
 AI agents connected over MCP get only what you share: writes run only on connections you allow, or wait for your
 review as pending edits.
 
-**PostgreSQL · MySQL · SQLite · macOS · Windows · Linux** — free public beta, no account needed.
+**PostgreSQL · MySQL · MariaDB · SQLite · macOS · Windows · Linux** — free public beta, no account needed.
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/editor-light.webp">
@@ -35,22 +35,26 @@ review as pending edits.
 
 - **SQL editor** — Completion that reads aliases, Format SQL, saved queries that save themselves, and one result tab
   per statement. Run the statement under the cursor, or all of them.
-- **Data editing** — Edit, insert and delete rows. Each change waits as pending with Preview SQL, and Save runs them
-  all in one transaction.
+- **Big results** — Past 10,000 rows, Fetch More and Fetch All read on from the same run, without running the query
+  again.
+- **Data editing** — Edit, insert and delete rows, in a table or in the result of a query on one table. Each change
+  waits as pending with Preview SQL, and Save runs them all in one transaction.
+- **Table pages** — Jump to any page, see the row count the database estimates, and Count Rows for the exact number.
 - **Schema diagram** — Open any schema as a diagram, with foreign keys drawn as relations. Edit it there: tables,
   columns, indexes, foreign keys and comments, applied only when you say so.
 - **Structure** — Columns, keys, indexes, checks and triggers of a table on one page, with its DDL one click away.
 - **Import and export** — Bring CSV, TSV, Excel or JSON into a table; save results as CSV, Excel, JSON, SQL, Markdown
   and more.
 - **History** — Every statement you run, with its time and rows.
-- **Connections** — Paste a connection URL or fill in the form. TLS, SSH tunnels, SQLite files, and passwords kept in
-  the macOS Keychain, the Windows Credential Manager or your Linux keyring (GNOME Keyring or KWallet).
+- **Connections** — Paste a connection URL or fill in the form. Search them and organize them in groups. TLS with
+  client certificates, SSH tunnels, SQLite files, and passwords kept in the macOS Keychain, the Windows Credential
+  Manager or your Linux keyring (GNOME Keyring or KWallet).
 - **Light and dark** — Or follow the system.
 
 ## Built-in MCP server
 
 Let Claude Code, Claude Desktop, Cursor, Codex, Windsurf, Antigravity or Gemini CLI work with your databases.
-Add Oxbow to them in one click from Settings; any other MCP client can be added by hand.
+Add Oxbow to them in one click from **Settings › Agents**; any other MCP client can be added by hand.
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/mcp-light.webp">
@@ -59,11 +63,17 @@ Add Oxbow to them in one click from Settings; any other MCP client can be added 
 
 - **Off until you share.** The server and every connection start off, and each connection is shared on its own.
 - **You choose what each connection allows.** Schema only, Read Only queries, or Read & Write for single row
-  changes. Never schema changes.
-- **Review in Oxbow.** An agent’s proposed changes open as pending edits, and nothing runs until you save them.
+  changes that commit at once. Never schema changes.
+- **Or review every change.** With Review in Oxbow, an agent’s proposed changes open as pending edits, and nothing
+  runs until you save them.
+- **Protected connections.** Agents never change their rows directly: their changes always wait for you.
+- **The agents’ login.** Oxbow warns you when the database user agents log in as can change data, and
+  **Create Read-Only User…** gives them one that can only read.
+- **SQL from an agent.** With Open in Editor, an agent can leave a migration in a new tab for you to run. When a
+  query of yours fails, Copy for Agent copies it with its error for your agent’s chat.
 - **Hide tables and columns** an agent should never see.
 - **Limits on every call** — rows, time and calls per minute — and an activity list of every call, without row data
-  or passwords.
+  or passwords. An agent’s long query shows in the status bar, with Cancel.
 
 ## Download
 
