@@ -58,7 +58,7 @@ Add Oxbow to them in one click from **Settings › Agents**; any other MCP clien
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/mcp-light.webp">
-  <img src="assets/mcp.webp" alt="Oxbow’s MCP settings: the agent apps, and what each connection shares." width="640">
+  <img src="assets/mcp.webp" alt="Settings › Agents on Apps: the server on, with Claude Code and Claude Desktop added and Cursor, Codex, Windsurf, Antigravity and Gemini CLI ready to add." width="640">
 </picture>
 
 - **Off until you share.** The server and every connection start off, and each connection is shared on its own.
